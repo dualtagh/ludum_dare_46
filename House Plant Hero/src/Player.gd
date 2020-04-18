@@ -12,6 +12,26 @@ func _physics_process(delta: float) -> void:
 	var direction: = get_direction()
 	_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interrupted)
 	_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
+	
+	if _velocity.length() > 0:
+		#$AnimatedSprite.play()
+		pass
+	else:
+		#$AnimatedSprite.stop()
+		pass
+		
+	if _velocity.x != 0:
+		#$AnimatedSprite.animation = "right"
+		#$AnimatedSprite.flip_v = false
+		#$AnimatedSprite.flip_h = velocity.x < 0
+		
+		# Pretty hacky
+		if _velocity.x < 0:
+			if $WaterGun.scale.x > 0:
+				$WaterGun.scale *= Vector2(-1,1)
+		else:
+			if $WaterGun.scale.x < 0:
+				$WaterGun.scale *= Vector2(-1,1)
 
 func get_direction() -> Vector2:
 	return Vector2(

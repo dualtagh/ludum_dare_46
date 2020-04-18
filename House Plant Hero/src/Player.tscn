@@ -10,9 +10,6 @@ extents = Vector2( 29, 29 )
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 8
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
 speed = Vector2( 800, 1400 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -24,4 +21,4 @@ position = Vector2( 0, -29 )
 shape = SubResource( 1 )
 
 [node name="WaterGun" parent="." instance=ExtResource( 3 )]
-position = Vector2( 23, -20 )
+position = Vector2( 0, -20 )

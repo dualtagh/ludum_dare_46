@@ -28,8 +28,14 @@ func _physics_process(delta: float) -> void:
 	for area in overlapping_areas:
 		if area.is_in_group("plants"):
 			(area as Plant).water()
+	
 	set_physics_process(false)
 	
 func squirt() -> void:
 	_change_state(STATES.SQUIRTING)
 	$Particles2D.restart()
+	$SquirtTimer.start()
+
+
+func _on_SquirtTimer_timeout() -> void:
+	_change_state(STATES.IDLE)
