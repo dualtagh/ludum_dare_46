@@ -1,14 +1,24 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://assets/blank_tile.png" type="Texture" id=1]
+[ext_resource path="res://assets/walls_and_floors.png" type="Texture" id=1]
 [ext_resource path="res://src/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Plant.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/background.png" type="Texture" id=4]
 
-[sub_resource type="ConvexPolygonShape2D" id=1]
+[sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 
-[sub_resource type="TileSet" id=2]
-0/name = "blank_tile.png 0"
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="TileSet" id=1]
+0/name = "walls_and_floors.png 0"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
@@ -18,29 +28,114 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 1 )
+0/shape = SubResource( 2 )
 0/shape_one_way = false
 0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 2 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
+1/name = "walls_and_floors.png 1"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 32, 0, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "walls_and_floors.png 2"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 64, 0, 64, 64 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 3 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "walls_and_floors.png 3"
+3/texture = ExtResource( 1 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 128, 0, 64, 64 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 4 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "walls_and_floors.png 4"
+4/texture = ExtResource( 1 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 192, 0, 64, 64 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 5 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
 
 [node name="LevelTest" type="Node2D"]
+position = Vector2( 0, 24 )
 __meta__ = {
 "_edit_group_": true
 }
 
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 512, 273 )
+scale = Vector2( 10, 10 )
+texture = ExtResource( 4 )
+
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource( 2 )
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 collision_layer = 8
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 65536, 0, 0, 65551, 0, 0, 131072, 0, 0, 131087, 0, 0, 196608, 0, 0, 196623, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327680, 0, 0, 327695, 0, 0, 393216, 0, 0, 393231, 0, 0, 458752, 0, 0, 458767, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0 )
+tile_data = PoolIntArray( -917504, 2, 0, -851968, 2, 0, -786432, 2, 0, -786372, 2, 0, -720896, 2, 0, -720836, 2, 0, -655360, 2, 0, -655300, 2, 0, -589824, 2, 0, -589764, 2, 0, -524288, 2, 0, -524228, 2, 0, -458752, 2, 0, -458692, 2, 0, -393216, 2, 0, -393156, 2, 0, -327680, 2, 0, -327620, 2, 0, -262144, 2, 0, -262084, 2, 0, -196548, 2, 0, -131072, 2, 0, -131012, 2, 0, -65536, 2, 0, -65476, 2, 0, 0, 2, 0, 60, 2, 0, 65536, 2, 0, 65596, 2, 0, 131072, 2, 0, 131132, 2, 0, 196608, 2, 0, 196668, 2, 0, 262144, 2, 0, 262204, 2, 0, 327680, 2, 0, 327740, 2, 0, 393216, 2, 0, 393276, 2, 0, 458752, 2, 0, 458812, 2, 0, 524288, 2, 0, 524348, 2, 0, 589824, 2, 0, 589884, 2, 0, 655360, 2, 0, 655420, 2, 0, 720896, 2, 0, 720956, 2, 0, 786432, 2, 0, 786492, 2, 0, 851968, 2, 0, 852028, 2, 0, 917504, 2, 0, 917564, 2, 0, 983040, 2, 0, 983100, 2, 0, 1048576, 2, 0, 1048580, 0, 0, 1048581, 0, 0, 1048582, 0, 0, 1048583, 0, 0, 1048584, 0, 0, 1048585, 0, 0, 1048586, 0, 0, 1048587, 0, 0, 1048591, 0, 0, 1048593, 0, 0, 1048597, 3, 0, 1048615, 4, 0, 1048619, 0, 0, 1048620, 0, 0, 1048621, 0, 0, 1048622, 0, 0, 1048623, 0, 0, 1048624, 0, 0, 1048625, 0, 0, 1048626, 0, 0, 1048627, 0, 0, 1048628, 0, 0, 1048629, 0, 0, 1048630, 0, 0, 1048631, 0, 0, 1048632, 0, 0, 1048633, 0, 0, 1048634, 0, 0, 1048635, 0, 0, 1048636, 2, 0, 1114112, 2, 0, 1114172, 2, 0, 1179648, 2, 0, 1179708, 2, 0, 1245184, 2, 0, 1245244, 2, 0, 1310720, 2, 0, 1310780, 2, 0, 1376256, 2, 0, 1376316, 2, 0, 1441792, 2, 0, 1441852, 2, 0, 1507328, 2, 0, 1507388, 2, 0, 1572864, 2, 0, 1572924, 2, 0, 1638400, 2, 0, 1638460, 2, 0, 1703936, 2, 0, 1703996, 2, 0, 1769472, 2, 0, 1769532, 2, 0, 1835008, 2, 0, 1835068, 2, 0, 2097152, 4, 0, 2097153, 0, 0, 2097154, 0, 0, 2097155, 0, 0, 2097156, 0, 0, 2097157, 0, 0, 2097158, 0, 0, 2097159, 0, 0, 2097160, 0, 0, 2097161, 0, 0, 2097162, 0, 0, 2097163, 0, 0, 2097164, 0, 0, 2097165, 0, 0, 2097166, 0, 0, 2097167, 0, 0, 2097168, 0, 0, 2097169, 0, 0, 2097170, 0, 0, 2097171, 0, 0, 2097172, 0, 0, 2097173, 0, 0, 2097174, 0, 0, 2097175, 0, 0, 2097176, 0, 0, 2097177, 0, 0, 2097178, 0, 0, 2097179, 0, 0, 2097180, 0, 0, 2097181, 0, 0, 2097182, 0, 0, 2097183, 0, 0, 2097184, 0, 0, 2097185, 0, 0, 2097186, 0, 0, 2097187, 0, 0, 2097188, 0, 0, 2097189, 0, 0, 2097190, 0, 0, 2097191, 0, 0, 2097192, 0, 0, 2097193, 0, 0, 2097194, 0, 0, 2097195, 0, 0, 2097196, 0, 0, 2097197, 0, 0, 2097198, 0, 0, 2097199, 0, 0, 2097200, 0, 0, 2097201, 0, 0, 2097202, 0, 0, 2097203, 0, 0, 2097204, 0, 0, 2097205, 0, 0, 2097206, 0, 0, 2097207, 0, 0, 2097208, 0, 0, 2097209, 0, 0, 2097210, 0, 0, 2097211, 0, 0, 2097212, 3, 0, 2097213, 0, 0 )
 
 [node name="Plant" parent="." instance=ExtResource( 3 )]
 position = Vector2( 102, 192 )
