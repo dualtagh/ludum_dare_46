@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/plant_unhealthy.png-250b5ecbc2c19f33f375edfff1b54407.stex"
+path="res://.import/player_walking_Animation 1_1.png-06de75470c45941485cdcb172ce84050.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/plant_unhealthy.png"
-dest_files=[ "res://.import/plant_unhealthy.png-250b5ecbc2c19f33f375edfff1b54407.stex" ]
+source_file="res://assets/player_walking_Animation 1_1.png"
+dest_files=[ "res://.import/player_walking_Animation 1_1.png-06de75470c45941485cdcb172ce84050.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

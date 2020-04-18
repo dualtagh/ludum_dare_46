@@ -1,24 +1,46 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://src/Player.gd" type="Script" id=2]
 [ext_resource path="res://src/WaterGun.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/player_walking_Animation 1_1.png" type="Texture" id=4]
+[ext_resource path="res://assets/player_walking_Animation 1_0.png" type="Texture" id=5]
+[ext_resource path="res://assets/player_idle.png" type="Texture" id=6]
+[ext_resource path="res://assets/player_walking_Animation 1_3.png" type="Texture" id=7]
+[ext_resource path="res://assets/player_walking_Animation 1_2.png" type="Texture" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 29, 29 )
+extents = Vector2( 21, 64 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "walking",
+"speed": 5.0
+} ]
 
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 8
 script = ExtResource( 2 )
 speed = Vector2( 800, 1400 )
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0, -32 )
-texture = ExtResource( 1 )
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -29 )
+position = Vector2( 0, -63 )
 shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 2, -80 )
+scale = Vector2( 10, 10 )
+frames = SubResource( 2 )
+animation = "idle"
 
 [node name="WaterGun" parent="." instance=ExtResource( 3 )]
-position = Vector2( 0, -20 )
+position = Vector2( -6, -105 )

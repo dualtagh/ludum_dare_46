@@ -43,10 +43,16 @@ format = 1
 tile_data = PoolIntArray( 0, 0, 0, 15, 0, 0, 65536, 0, 0, 65551, 0, 0, 131072, 0, 0, 131087, 0, 0, 196608, 0, 0, 196623, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327680, 0, 0, 327695, 0, 0, 393216, 0, 0, 393231, 0, 0, 458752, 0, 0, 458767, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0 )
 
 [node name="Plant" parent="." instance=ExtResource( 3 )]
-position = Vector2( 102, 221 )
+position = Vector2( 102, 192 )
 
 [node name="Plant2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 927, 466 )
+position = Vector2( 927, 445 )
+
+[node name="Plant3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 927, 192 )
+
+[node name="Plant4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 233, 450 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 387, 144 )

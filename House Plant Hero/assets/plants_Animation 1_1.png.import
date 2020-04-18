@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/plant_healthy.png-3ca6846c9fa2934c140a420b7509dc1d.stex"
+path="res://.import/plants_Animation 1_1.png-f3a40cdbc9e10f114301da8a7f3dccb7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/plant_healthy.png"
-dest_files=[ "res://.import/plant_healthy.png-3ca6846c9fa2934c140a420b7509dc1d.stex" ]
+source_file="res://assets/plants_Animation 1_1.png"
+dest_files=[ "res://.import/plants_Animation 1_1.png-f3a40cdbc9e10f114301da8a7f3dccb7.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

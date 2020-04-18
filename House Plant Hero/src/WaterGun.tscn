@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://assets/blank_tile.png" type="Texture" id=1]
+[ext_resource path="res://assets/watergun.png" type="Texture" id=1]
 [ext_resource path="res://src/WaterGun.gd" type="Script" id=2]
 
 [sub_resource type="ParticlesMaterial" id=1]
@@ -13,19 +13,18 @@ scale = 10.0
 scale_random = 0.84
 color = Color( 0.180392, 0.247059, 0.713726, 1 )
 
-[sub_resource type="CircleShape2D" id=2]
-radius = 27.0185
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 27.0
+height = 66.0
 
 [node name="WaterGun" type="Area2D"]
 script = ExtResource( 2 )
-
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 19, 0 )
-scale = Vector2( 0.6, 0.2 )
-texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Particles2D" type="Particles2D" parent="."]
-position = Vector2( 38, 0 )
+position = Vector2( 71, -3 )
 emitting = false
 amount = 30
 one_shot = true
@@ -33,12 +32,17 @@ speed_scale = 4.0
 process_material = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 65, 6 )
+position = Vector2( 97, 24 )
 shape = SubResource( 2 )
 
 [node name="SquirtTimer" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 30, 0 )
+scale = Vector2( 10, 10 )
+texture = ExtResource( 1 )
 [connection signal="area_entered" from="." to="." method="_on_WaterGun_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_WaterGun_area_exited"]
 [connection signal="timeout" from="SquirtTimer" to="." method="_on_SquirtTimer_timeout"]

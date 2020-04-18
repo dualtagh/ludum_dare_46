@@ -8,14 +8,15 @@ func _process(delta) -> void:
 		$AnimatedSprite.play("healthy")
 	elif health > 30:
 		$AnimatedSprite.play("unhealthy")
+	elif health <= 0:
+		$AnimatedSprite.play("dead")
 	else:
 		$AnimatedSprite.play("dying")
-		if health <= 0:
-			hide()
 
 
 func _on_ThirstTimer_timeout() -> void:
 	health -= 10
 
 func water() -> void:
-	health = 100
+	if health > 0:
+		health = 100
