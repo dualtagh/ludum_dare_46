@@ -40,6 +40,10 @@ config/icon="res://icon.png"
 
 settings/gdscript/max_call_stack=2056
 
+[display]
+
+window/size/resizable=false
+
 [importer_defaults]
 
 texture={
