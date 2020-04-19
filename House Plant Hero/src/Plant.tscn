@@ -1,24 +1,25 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/plants_Animation 1_0.png" type="Texture" id=1]
 [ext_resource path="res://assets/plants_Animation 1_2.png" type="Texture" id=2]
 [ext_resource path="res://src/Plant.gd" type="Script" id=3]
 [ext_resource path="res://assets/plants_Animation 1_3.png" type="Texture" id=4]
 [ext_resource path="res://assets/plants_Animation 1_1.png" type="Texture" id=5]
+[ext_resource path="res://assets/plant_die.wav" type="AudioStream" id=6]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 31, 63 )
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "healthy",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ ExtResource( 5 ) ],
 "loop": true,
-"name": "dying",
+"name": "unhealthy",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
@@ -26,9 +27,9 @@ animations = [ {
 "name": "dead",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ) ],
+"frames": [ ExtResource( 2 ) ],
 "loop": true,
-"name": "unhealthy",
+"name": "dying",
 "speed": 5.0
 } ]
 
@@ -38,15 +39,17 @@ animations = [ {
 script = ExtResource( 3 )
 
 [node name="ThirstTimer" type="Timer" parent="."]
-wait_time = 2.0
-autostart = true
+wait_time = 3.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 8, 8 )
-frames = SubResource( 1 )
+frames = SubResource( 2 )
 animation = "dead"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
 [connection signal="body_entered" from="." to="." method="_on_Plant_body_entered"]
 [connection signal="timeout" from="ThirstTimer" to="." method="_on_ThirstTimer_timeout"]

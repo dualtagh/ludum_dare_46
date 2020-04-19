@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
+[ext_resource path="res://assets/jump.wav" type="AudioStream" id=1]
 [ext_resource path="res://src/Player.gd" type="Script" id=2]
 [ext_resource path="res://src/WaterGun.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/player_walking_Animation 1_1.png" type="Texture" id=4]
@@ -28,6 +29,7 @@ animations = [ {
 collision_mask = 8
 script = ExtResource( 2 )
 speed = Vector2( 800, 1400 )
+gravity = 3800.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -63 )
@@ -39,8 +41,13 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 2, -80 )
 scale = Vector2( 10, 10 )
+z_index = 1
 frames = SubResource( 2 )
 animation = "idle"
 
 [node name="WaterGun" parent="." instance=ExtResource( 3 )]
 position = Vector2( -6, -105 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -10.0

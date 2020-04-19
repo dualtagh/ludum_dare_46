@@ -1,6 +1,8 @@
 extends Area2D
 class_name WaterGun
 
+onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
+
 enum STATES { IDLE, SQUIRTING}
 var current_state = STATES.IDLE
 
@@ -35,6 +37,7 @@ func squirt() -> void:
 	_change_state(STATES.SQUIRTING)
 	$Particles2D.restart()
 	$SquirtTimer.start()
+	audio_player.play()
 
 
 func _on_SquirtTimer_timeout() -> void:

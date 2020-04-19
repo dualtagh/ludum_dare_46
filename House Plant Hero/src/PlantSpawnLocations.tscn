@@ -1,0 +1,48 @@
+[gd_scene format=2]
+
+[node name="PlantSpawnLocations" type="Node"]
+
+[node name="Spawn3" type="Node2D" parent="."]
+position = Vector2( 162, 217 )
+
+[node name="Spawn5" type="Node2D" parent="."]
+position = Vector2( 247, 217 )
+
+[node name="Spawn11" type="Node2D" parent="."]
+position = Vector2( 121, 472 )
+
+[node name="Spawn9" type="Node2D" parent="."]
+position = Vector2( 206, 472 )
+
+[node name="Spawn7" type="Node2D" parent="."]
+position = Vector2( 288, 472 )
+
+[node name="Spawn17" type="Node2D" parent="."]
+position = Vector2( 386, 472 )
+
+[node name="Spawn15" type="Node2D" parent="."]
+position = Vector2( 471, 472 )
+
+[node name="Spawn13" type="Node2D" parent="."]
+position = Vector2( 553, 472 )
+
+[node name="Spawn24" type="Node2D" parent="."]
+position = Vector2( 673, 474 )
+
+[node name="Spawn23" type="Node2D" parent="."]
+position = Vector2( 749, 472 )
+
+[node name="Spawn21" type="Node2D" parent="."]
+position = Vector2( 834, 472 )
+
+[node name="Spawn19" type="Node2D" parent="."]
+position = Vector2( 916, 472 )
+
+[node name="Spawn30" type="Node2D" parent="."]
+position = Vector2( 699, 217 )
+
+[node name="Spawn28" type="Node2D" parent="."]
+position = Vector2( 791, 217 )
+
+[node name="Spawn26" type="Node2D" parent="."]
+position = Vector2( 876, 217 )

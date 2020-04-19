@@ -1,4 +1,7 @@
 extends KinematicBody2D
+class_name Player
+
+onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
 
 const FLOOR_NORMAL: = Vector2.UP
 
@@ -52,6 +55,14 @@ func calculate_move_velocity(
 	out.y += gravity * get_physics_process_delta_time()
 	if direction.y == -1.0:
 		out.y = speed.y * direction.y
+		audio_player.play()
 	if is_jump_interrupted:
 		out.y = 0
 	return out
+
+func _ready() -> void:
+	hide()
+	
+func start(pos: Vector2) -> void:
+	position = pos
+	show()
